@@ -1,0 +1,16 @@
+title: DyNet
+description: The Dynamic Neural Network Toolkit
+markdown: kramdown
+theme: minima
+minima:
+  date_format: "%B %-d, %Y"
+permalink: /blog/:year/:month/:day/:title
+header_pages:
+  - blog.html
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  # - jekyll-sitemap # broken until 3.5.1
+paginate: 5
+# google_analytics: UA-XXXXXXXX-1
