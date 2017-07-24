@@ -8,7 +8,7 @@ permalink: /blog/:year/:month/:day/:title
 header_pages:
   - blog.html
 gems:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
   # - jekyll-sitemap # broken until 3.5.1
