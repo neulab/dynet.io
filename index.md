@@ -3,34 +3,64 @@ layout: default
 title: DyNet - The Dynamic Neural Network Toolkit
 ---
 
-<div align="center">
-<img alt="DyNet" src="assets/dynet_logo.png">
-<br>
-<br>
-The Dynamic Neural Network Toolkit
-<br>
-<br>
-</div>
+![DyNet](assets/dynet_logo.png)
 
-# Features Table
+## The Dynamic Neural Network Toolkit
 
-  - Dynamic Computational Graph
-    - DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance. Learn more.
-  - Dynamic Operation Batching
-    - DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so. See our NIPS paper. Learn more.
-  - Ideal for Natural Language Processing.
-    - DyNet is well-suited for machine translation models. Learn more.
+
+
+
+
+{% assign index_feat_1 = 'Dynamic Computational Graph' %}
+{% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance' %}
+{% assign index_feat_button_1 = 'Learn more' %}
+
+{% assign index_feat_2 = 'Dynamic Operation Batching' %}
+{% assign index_feat_text_2 = 'DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so' %}
+{% assign index_feat_button_2 = 'See our NIPS paper' %}
+
+{% assign index_feat_3 = 'Ideal for Natural Language Processing' %}
+{% assign index_feat_text_3 = 'DyNet is well-suited for machine translation, syntactic parsing, morphological inflection, and other areas with models that have dynamic structures that change at every training instance.' %}
+{% assign index_feat_button_3 = 'Learn more' %}
+
+| {{ index_feat_1 }}        | {{ index_feat_2 }}        | {{ index_feat_3 }}        |
+|:--------------------------|:--------------------------|:--------------------------|
+| {{ index_feat_text_1 }}   | {{ index_feat_text_2 }}   | {{ index_feat_text_3 }}   |
+| {{ index_feat_button_1 }} | {{ index_feat_button_2 }} | {{ index_feat_button_3 }} |
+
+
+
+
 
 # Get Started
 
     pip install git+https://github.com/clab/dynet#egg=dynet
 
-# Tutorials and Examples Table
 
-  - [Tutorials](http://dynet.readthedocs.io/en/latest/tutorial.html)
-  - [Examples](http://dynet.readthedocs.io/en/latest/examples.html)
+
+
+
+{% assign index_te_1 = '[Tutorials](http://dynet.readthedocs.io/en/latest/tutorial.html)' %}
+{% assign index_te_text_1 = 'Learn how to use DyNet' %}
+{% assign index_te_button_1 = 'Browse tutorials' %}
+
+{% assign index_te_2 = '[Examples](http://dynet.readthedocs.io/en/latest/examples.html)' %}
+{% assign index_te_text_2 = 'Learn how to use DyNet' %}
+{% assign index_te_button_2 = 'Browse examples' %}
+
+| {{ index_te_1 }}        | {{ index_te_2 }}        |
+|:------------------------|:------------------------|
+| {{ index_te_text_1 }}   | {{ index_te_text_2 }}   |
+| {{ index_te_button_1 }} | {{ index_te_button_2 }} |
+
+
+
+
 
 # Companies and Universities supporting DyNet
 
-  - CMU
-  - Petuum
+{% assign index_comp_1 = '[Petuum](http://www.petuum.com)' %}
+{% assign index_comp_2 = '[CMU](http://cmu.edu)' %}
+
+|:-------------------|:-------------------|:-------------------|:-------------------|
+| {{ index_comp_1 }} | {{ index_comp_2 }} | {{ index_comp_3 }} | {{ index_comp_4 }} |
