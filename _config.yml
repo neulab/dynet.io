@@ -6,10 +6,9 @@ minima:
   date_format: "%B %-d, %Y"
 permalink: /blog/:year/:month/:day/:title
 header_pages:
-  - install.md
-  - docs.md
   - about.md
   - blog/index.html
+  - docs.md
   - support.md
   - github.md
 gems:
