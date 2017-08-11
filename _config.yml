@@ -4,10 +4,10 @@ markdown: kramdown
 theme: minima
 minima:
   date_format: "%B %-d, %Y"
-permalink: /blog/:year/:month/:day/:title
+permalink: /news/:year/:month/:day/:title
 header_pages:
   - about.md
-  - blog/index.html
+  - news/index.html
   - docs.md
   - support.md
   - github.md
@@ -17,5 +17,5 @@ gems:
   - jekyll-seo-tag
   # - jekyll-sitemap # broken until 3.5.1
 paginate: 5
-paginate_path: "/blog/page:num/"
+paginate_path: "/news/page:num/"
 # google_analytics: UA-XXXXXXXX-1
