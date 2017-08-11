@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Documentation
 permalink: /docs/
 redirect_to:

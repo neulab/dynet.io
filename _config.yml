@@ -1,9 +1,6 @@
 title: DyNet
 description: The Dynamic Neural Network Toolkit
 markdown: kramdown
-theme: minima
-minima:
-  date_format: "%B %-d, %Y"
 permalink: /news/:year/:month/:day/:title
 header_pages:
   - about.md
@@ -12,7 +9,7 @@ header_pages:
   - support.md
   - github.md
 gems:
-  # - jekyll-feed
+  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
   # - jekyll-sitemap # broken until 3.5.1

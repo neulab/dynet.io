@@ -1,5 +1,4 @@
 ---
-layout: default
 title: DyNet - The Dynamic Neural Network Toolkit
 ---
 
@@ -64,12 +63,19 @@ title: DyNet - The Dynamic Neural Network Toolkit
 
 # Companies and Universities supporting DyNet
 
-{% assign index_comp_1 = '[Petuum](http://www.petuum.com)' %}
-{% assign index_comp_2 = '[CMU](http://cmu.edu)' %}
+{% assign index_comp_1 = '![Carnegie Mellon University](/assets/contributors/cmu.png)' %}
+{% assign index_comp_2 = '![Bar-Ilan University](/assets/contributors/biu.jpg)' %}
+{% assign index_comp_3 = '![Allen Institute for Artificial Intelligence](/assets/contributors/ai2.png)' %}
+{% assign index_comp_4 = '![Petuum](/assets/contributors/petuum.png)' %}
+{% assign index_comp_5 = '![Nara Institute of Science and Technology](/assets/contributors/naist.png)' %}
+{% assign index_comp_6 = '![University of Washington](/assets/contributors/uw.jpg)' %}
+{% assign index_comp_7 = ' ' %}
+{% assign index_comp_8 = ' ' %}
 
 <div markdown="1">
 
 |:-------------------|:-------------------|:-------------------|:-------------------|
 | {{ index_comp_1 }} | {{ index_comp_2 }} | {{ index_comp_3 }} | {{ index_comp_4 }} |
+| {{ index_comp_5 }} | {{ index_comp_6 }} | {{ index_comp_7 }} | {{ index_comp_8 }} |
 
 </div>
