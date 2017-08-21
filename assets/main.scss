@@ -7,3 +7,54 @@
  * Load all other style sheets
  */
 @import "template";
+
+/**
+ * Set style for homepage
+ */
+.homepage-logo {
+  svg {
+    height: 200px;
+  }
+  text-align: center;
+}
+.homepage-features {
+  background-color: #eeeeff;
+  table {
+    width: 100%;
+    td {
+      width: 33%;
+      text-align: justify;
+      vertical-align: top;
+    }
+    tfoot {
+      td {
+        text-align: center;
+      }
+    }
+  }
+}
+.homepage-getstarted {
+
+}
+.homepage-tutorials {
+  background-color: #eeeeff;
+  table {
+    width: 100%;
+    td {
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
+.homepage-companies {
+  background-color: #ffffff;
+  table {
+    width: 100%;
+    td {
+      width: 25%;
+      text-align: center;
+      vertical-align: center;
+      padding: 12px;
+    }
+  }
+}
