@@ -1,5 +1,9 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# This file contains page specific styles
+# Do not remove the front matter: it ensures Jekyll loads it
 ---
 
+/**
+ * Load all other style sheets
+ */
 @import "template";

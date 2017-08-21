@@ -2,7 +2,9 @@
 title: DyNet - The Dynamic Neural Network Toolkit
 ---
 
-![DyNet](assets/dynet_logo.png)
+<div>
+{% include logo.svg %}
+</div>
 
 ## The Dynamic Neural Network Toolkit
 
