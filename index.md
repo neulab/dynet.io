@@ -3,6 +3,7 @@ title: DyNet - The Dynamic Neural Network Toolkit
 layout: base
 ---
 
+<div class="homepage" markdown="1">
 <div class="homepage-logo" markdown="1"><div class="wrapper" markdown="1">
 {% include logo.svg %}
 
@@ -91,3 +92,4 @@ layout: base
 | {{ index_comp_5 }} | {{ index_comp_6 }} | {{ index_comp_7 }} | {{ index_comp_8 }} |
 
 </div></div>
+</div>

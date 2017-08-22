@@ -11,49 +11,47 @@
 /**
  * Set style for homepage
  */
-.homepage-logo {
-  svg {
-    height: 200px;
-  }
+.homepage {
   text-align: center;
-}
-.homepage-features {
-  background-color: #eeeeff;
+  overflow: auto;
+  h1, table {
+    padding-top: $spacing-unit;
+  }
+  table, h2, .highlighter-rouge {
+    padding-bottom: $spacing-unit;
+  }
   table {
     width: 100%;
     td {
+      vertical-align: center;
+    }
+  }
+  .homepage-logo {
+    svg {
+      height: 200px;
+    }
+  }
+  .homepage-features {
+    background-color: #eeeeff;
+    table tbody td {
       width: 33%;
       text-align: justify;
       vertical-align: top;
     }
-    tfoot {
-      td {
-        text-align: center;
-      }
-    }
   }
-}
-.homepage-getstarted {
-
-}
-.homepage-tutorials {
-  background-color: #eeeeff;
-  table {
-    width: 100%;
-    td {
+  .homepage-getstarted {
+    text-align: left;
+  }
+  .homepage-tutorials {
+    background-color: #eeeeff;
+    table td {
       width: 50%;
-      text-align: center;
     }
   }
-}
-.homepage-companies {
-  background-color: #ffffff;
-  table {
-    width: 100%;
-    td {
+  .homepage-companies {
+    background-color: #ffffff;
+    table td {
       width: 25%;
-      text-align: center;
-      vertical-align: center;
       padding: 12px;
     }
   }
