@@ -1,5 +1,6 @@
 title: DyNet
 description: The Dynamic Neural Network Toolkit
+copyright: © 2017 DyNet
 markdown: kramdown
 permalink: /news/:year/:month/:day/:title
 header_pages:

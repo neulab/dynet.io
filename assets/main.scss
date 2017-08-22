@@ -30,20 +30,30 @@
     svg {
       height: 200px;
     }
+    .logo-color-1 {
+      fill: $site-color-dark;
+    }
+    .logo-color-2 {
+      fill:$site-color-med;
+    }
+    h2 {
+      padding-bottom: 3*$spacing-unit;
+    }
   }
   .homepage-features {
-    background-color: #eeeeff;
+    background-color: $site-color-light;
     table tbody td {
       width: 33%;
       text-align: justify;
       vertical-align: top;
+      padding: 16px;
     }
   }
   .homepage-getstarted {
     text-align: left;
   }
   .homepage-tutorials {
-    background-color: #eeeeff;
+    background-color: $site-color-light;
     table td {
       width: 50%;
     }
@@ -52,7 +62,7 @@
     background-color: #ffffff;
     table td {
       width: 25%;
-      padding: 12px;
+      padding: 32px;
     }
   }
 }

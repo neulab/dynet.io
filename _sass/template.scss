@@ -11,15 +11,19 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     30px !default;
 
 $text-color:       #111 !default;
+$text-color-light: #eee !default;
 $background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+
+$site-color-dark:  #1b1b63 !default;
+$site-color-med:   #9090b2 !default;
+$site-color-light: #eeeeff !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    960px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
