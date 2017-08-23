@@ -3,66 +3,96 @@
 # Do not remove the front matter: it ensures Jekyll loads it
 ---
 
-/**
- * Load all other style sheets
- */
-@import "template";
+$site-color-dark:  #1b1b63 !default;
+$site-color-med:   #9090b2 !default;
+$site-color-light: #eeeeff !default;
+$site-color-invert:   #eee !default;
+
+@import "syntax-highlighting";
+
+
+
+
+
+.site-header {
+  background-color: $site-color-dark;
+
+  .logo-color-1 {
+    fill: $site-color-invert;
+    stroke: $site-color-invert;
+    stroke-width: 4;
+  }
+  .logo-color-2 {
+    fill:$site-color-med;
+    stroke:$site-color-med;
+    stroke-width: 4;
+  }
+}
+
+
+
+
+
+.site-footer {
+  background-color: $site-color-dark;
+  color: $site-color-invert;
+  margin-bottom: 0;
+  .logo-color-1 {
+    fill: $site-color-invert;
+    stroke: $site-color-invert;
+    stroke-width: 4;
+  }
+  .logo-color-2 {
+    fill:$site-color-med;
+    stroke:$site-color-med;
+    stroke-width: 4;
+  }
+}
+
+.footer-title {
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+  }
+}
+
+
+.navbar-brand svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+}
 
 /**
  * Set style for homepage
  */
-.homepage {
-  text-align: center;
-  overflow: auto;
-  h1, table {
-    padding-top: $spacing-unit;
+.homepage-logo {
+  background-color: $site-color-dark;
+  color: $site-color-invert;
+  svg {
+    height: 200px;
   }
-  table, h2, .highlighter-rouge {
-    padding-bottom: $spacing-unit;
+  .logo-color-1 {
+    fill: $site-color-invert;
   }
-  table {
+  .logo-color-2 {
+    fill:$site-color-med;
+  }
+}
+.homepage-getstarted {
+
+}
+.homepage-features {
+  text-align: justify;
+}
+.homepage-tutorials {
+  background-color: $site-color-light;
+}
+.homepage-companies {
+  background-color: #ffffff;
+  img {
     width: 100%;
-    td {
-      vertical-align: center;
-    }
-  }
-  .homepage-logo {
-    svg {
-      height: 200px;
-    }
-    .logo-color-1 {
-      fill: $site-color-dark;
-    }
-    .logo-color-2 {
-      fill:$site-color-med;
-    }
-    h2 {
-      padding-bottom: 3*$spacing-unit;
-    }
-  }
-  .homepage-features {
-    background-color: $site-color-light;
-    table tbody td {
-      width: 33%;
-      text-align: justify;
-      vertical-align: top;
-      padding: 16px;
-    }
-  }
-  .homepage-getstarted {
-    text-align: left;
-  }
-  .homepage-tutorials {
-    background-color: $site-color-light;
-    table td {
-      width: 50%;
-    }
-  }
-  .homepage-companies {
-    background-color: #ffffff;
-    table td {
-      width: 25%;
-      padding: 32px;
-    }
+    padding: 10%;
   }
 }

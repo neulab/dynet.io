@@ -1,0 +1,227 @@
+---
+title: DyNet - The Dynamic Neural Network Toolkit
+layout: base
+---
+
+
+
+
+
+
+<div class="homepage-logo text-center">
+  <div class="container">
+    {% include logo.svg %}
+
+    <h2 class="pt-2 pb-4">
+      The Dynamic Neural Network Toolkit
+    </h2>
+
+    <a class="btn btn-outline-primary mb-5" href="{{ index_te_url_2 }}">
+      Learn more
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<div class="homepage-getstarted">
+  <div class="container">
+    <h1 class="pt-4 pb-3">
+      Get Started
+    </h1>
+
+    <pre>
+      <code>
+pip install git+https://github.com/clab/dynet#egg=dynet
+      </code>
+    </pre>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="homepage-features" style="display: none;">
+  <div class="container">
+    {% assign index_feat_1 = 'Dynamic Computational Graph' %}
+    {% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance' %}
+    {% assign index_feat_button_1 = 'Learn more' %}
+
+    {% assign index_feat_2 = 'Dynamic Operation Batching' %}
+    {% assign index_feat_text_2 = 'DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so' %}
+    {% assign index_feat_button_2 = 'See our NIPS paper' %}
+
+    {% assign index_feat_3 = 'Ideal for Natural Language Processing' %}
+    {% assign index_feat_text_3 = 'DyNet is well-suited for machine translation, syntactic parsing, morphological inflection, and other areas with models that have dynamic structures that change at every training instance.' %}
+    {% assign index_feat_button_3 = 'Learn more' %}
+
+    <div class="row">
+      <div class="col">
+        {{ index_feat_1 }}
+      </div>
+      <div class="col">
+        {{ index_feat_2 }}
+      </div>
+      <div class="col">
+        {{ index_feat_3 }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        {{ index_feat_text_1 }}
+      </div>
+      <div class="col">
+        {{ index_feat_text_2 }}
+      </div>
+      <div class="col">
+        {{ index_feat_text_3 }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        {{ index_feat_button_1 }}
+      </div>
+      <div class="col">
+        {{ index_feat_button_2 }}
+      </div>
+      <div class="col">
+        {{ index_feat_button_3 }}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class="homepage-tutorials">
+  <div class="container">
+
+    {% assign index_te_title_1 = 'Tutorials' %}
+    {% assign index_te_url_1 = 'http://dynet.readthedocs.io/en/latest/tutorial.html' %}
+    {% assign index_te_text_1 = 'Learn how to use DyNet' %}
+    {% assign index_te_button_text_1 = 'Browse tutorials' %}
+
+    {% assign index_te_title_2 = 'Examples' %}
+    {% assign index_te_url_2 = 'http://dynet.readthedocs.io/en/latest/examples.html' %}
+    {% assign index_te_text_2 = 'Browse projects built using DyNet' %}
+    {% assign index_te_button_text_2 = 'Explore examples' %}
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="row justify-content-center">
+          <h2 class="py-5">
+            <a href="{{ index_te_url_1 }}">
+              {{ index_te_title_1 }}
+            </a>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          {% include book.svg %}
+        </div>
+        <div class="row justify-content-center">
+          <span class="pt-2 pb-5">
+            {{ index_te_text_1 }}
+          </span>
+        </div>
+        <div class="row justify-content-center">
+          <a class="btn btn-outline-primary mb-5" href="{{ index_te_url_1 }}">
+            {{ index_te_button_text_1 }}
+          </a>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="row justify-content-center">
+          <h2 class="py-5">
+            <a href="{{ index_te_url_2 }}">
+              {{ index_te_title_2 }}
+            </a>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          {% include grid.svg %}
+        </div>
+        <div class="row justify-content-center">
+          <span class="pt-2 pb-5">
+            {{ index_te_text_2 }}
+          </span>
+        </div>
+        <div class="row justify-content-center">
+          <a class="btn btn-outline-primary mb-5" href="{{ index_te_url_2 }}">
+            {{ index_te_button_text_2 }}
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="homepage-companies text-center">
+  <div class="container">
+    <h1 class="py-4">
+      Companies &amp; Universities supporting DyNet
+    </h1>
+
+    {% assign index_comp_title_1 = 'Carnegie Mellon University' %}
+    {% assign index_comp_url_1 = '/assets/contributors/cmu.png' %}
+    {% assign index_comp_title_2 = 'Bar-Ilan University' %}
+    {% assign index_comp_url_2 = '/assets/contributors/biu.jpg' %}
+    {% assign index_comp_title_3 = 'Allen Institute for Artificial Intelligence' %}
+    {% assign index_comp_url_3 = '/assets/contributors/ai2.png' %}
+    {% assign index_comp_title_4 = 'Petuum' %}
+    {% assign index_comp_url_4 = '/assets/contributors/petuum.png' %}
+    {% assign index_comp_title_5 = 'Nara Institute of Science and Technology' %}
+    {% assign index_comp_url_5 = '/assets/contributors/naist.png' %}
+    {% assign index_comp_title_6 = 'University of Washington' %}
+    {% assign index_comp_url_6 = '/assets/contributors/uw.jpg' %}
+    {% assign index_comp_title_7 = ' ' %}
+    {% assign index_comp_url_7 = ' ' %}
+    {% assign index_comp_title_8 = ' ' %}
+    {% assign index_comp_url_8 = ' ' %}
+
+    <div class="row align-items-center">
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_1 }}" alt="{{ index_comp_title_1 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_2 }}" alt="{{ index_comp_title_2 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_3 }}" alt="{{ index_comp_title_3 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_4 }}" alt="{{ index_comp_title_4 }}"/>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_5 }}" alt="{{ index_comp_title_5 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_6 }}" alt="{{ index_comp_title_6 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_7 }}" alt="{{ index_comp_title_7 }}"/>
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="{{ index_comp_url_8 }}" alt="{{ index_comp_title_8 }}"/>
+      </div>
+    </div>
+
+  </div>
+</div>
