@@ -7,9 +7,9 @@ layout: base
 
 
 
+<div class="text-center site-bg-med">
+  <div class="container pt-5">
 
-<div class="homepage-logo text-center">
-  <div class="container">
     {% include logo.svg %}
 
     <h2 class="pt-2 pb-4">
@@ -26,18 +26,18 @@ layout: base
 
 
 
-<div class="homepage-getstarted">
-  <div class="container">
-    <h1 class="pt-4 pb-3">
-      Get Started
-    </h1>
+<div class="container">
+  <h1 class="pt-4 pb-3">
+    Get Started
+  </h1>
 
-    <pre>
-      <code>
-pip install git+https://github.com/clab/dynet#egg=dynet
-      </code>
-    </pre>
+  <div class="input-group pb-5">
+    <input type="text" class="form-control" value="pip install git+https://github.com/clab/dynet#egg=dynet" readonly>
+    <span class="input-group-btn">
+      <button class="btn btn-primary-outline">Copy</a>
+    </span>
   </div>
+
 </div>
 
 
@@ -45,8 +45,6 @@ pip install git+https://github.com/clab/dynet#egg=dynet
 
 
 
-<div class="homepage-features" style="display: none;">
-  <div class="container">
     {% assign index_feat_1 = 'Dynamic Computational Graph' %}
     {% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance' %}
     {% assign index_feat_button_1 = 'Learn more' %}
@@ -59,51 +57,12 @@ pip install git+https://github.com/clab/dynet#egg=dynet
     {% assign index_feat_text_3 = 'DyNet is well-suited for machine translation, syntactic parsing, morphological inflection, and other areas with models that have dynamic structures that change at every training instance.' %}
     {% assign index_feat_button_3 = 'Learn more' %}
 
-    <div class="row">
-      <div class="col">
-        {{ index_feat_1 }}
-      </div>
-      <div class="col">
-        {{ index_feat_2 }}
-      </div>
-      <div class="col">
-        {{ index_feat_3 }}
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        {{ index_feat_text_1 }}
-      </div>
-      <div class="col">
-        {{ index_feat_text_2 }}
-      </div>
-      <div class="col">
-        {{ index_feat_text_3 }}
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        {{ index_feat_button_1 }}
-      </div>
-      <div class="col">
-        {{ index_feat_button_2 }}
-      </div>
-      <div class="col">
-        {{ index_feat_button_3 }}
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 
 
 
-
-<div class="homepage-tutorials">
+<div class="site-bg-lightgray">
   <div class="container">
 
     {% assign index_te_title_1 = 'Tutorials' %}
@@ -129,7 +88,7 @@ pip install git+https://github.com/clab/dynet#egg=dynet
           {% include book.svg %}
         </div>
         <div class="row justify-content-center">
-          <span class="pt-2 pb-5">
+          <span class="pt-3 pb-5">
             {{ index_te_text_1 }}
           </span>
         </div>
@@ -152,7 +111,7 @@ pip install git+https://github.com/clab/dynet#egg=dynet
           {% include grid.svg %}
         </div>
         <div class="row justify-content-center">
-          <span class="pt-2 pb-5">
+          <span class="pt-3 pb-5">
             {{ index_te_text_2 }}
           </span>
         </div>
@@ -170,9 +129,9 @@ pip install git+https://github.com/clab/dynet#egg=dynet
 
 
 
-<div class="homepage-companies text-center">
+<div style="background-color: #ffffff">
   <div class="container">
-    <h1 class="py-4">
+    <h1 class="pt-5 pb-2 text-center">
       Companies &amp; Universities supporting DyNet
     </h1>
 
@@ -195,31 +154,31 @@ pip install git+https://github.com/clab/dynet#egg=dynet
 
     <div class="row align-items-center">
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_1 }}" alt="{{ index_comp_title_1 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_1 }}" alt="{{ index_comp_title_1 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_2 }}" alt="{{ index_comp_title_2 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_2 }}" alt="{{ index_comp_title_2 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_3 }}" alt="{{ index_comp_title_3 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_3 }}" alt="{{ index_comp_title_3 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_4 }}" alt="{{ index_comp_title_4 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_4 }}" alt="{{ index_comp_title_4 }}"/>
       </div>
     </div>
 
     <div class="row align-items-center">
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_5 }}" alt="{{ index_comp_title_5 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_5 }}" alt="{{ index_comp_title_5 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_6 }}" alt="{{ index_comp_title_6 }}"/>
+        <img class="img-fluid p-3" src="{{ index_comp_url_6 }}" alt="{{ index_comp_title_6 }}"/>
+      </div>
+      <div class="col-6 col-md-3 ">
+        <!-- <img class="img-fluid p-3" src="{{ index_comp_url_7 }}" alt="{{ index_comp_title_7 }}"/> -->
       </div>
       <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_7 }}" alt="{{ index_comp_title_7 }}"/>
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="{{ index_comp_url_8 }}" alt="{{ index_comp_title_8 }}"/>
+        <!-- <img class="img-fluid p-3" src="{{ index_comp_url_8 }}" alt="{{ index_comp_title_8 }}"/> -->
       </div>
     </div>
 

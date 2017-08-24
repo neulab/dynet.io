@@ -3,96 +3,114 @@
 # Do not remove the front matter: it ensures Jekyll loads it
 ---
 
-$site-color-dark:  #1b1b63 !default;
-$site-color-med:   #9090b2 !default;
-$site-color-light: #eeeeff !default;
-$site-color-invert:   #eee !default;
+// bootstrap core CSS
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/print";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// bootstrap components: disabled to save compile time
+@import "bootstrap/transitions";
+// @import "bootstrap/dropdown";
+// @import "bootstrap/button-group";
+@import "bootstrap/input-group";
+// @import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+// @import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+// @import "bootstrap/close";
+// @import "bootstrap/modal";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+@import "bootstrap/utilities";
+
+// collapsible navigation menu without javascript using invisible checkbox
+.navbar-expand-md {
+  input:checked ~ .navbar-collapse {
+    display: flex !important; // show menu if checkbox checked
+    .ml-auto {
+      margin-left: 0 !important; // right-align if checkbox checked
+    }
+  }
+}
+
+$site-color-dark:       #1b1b63 !default;
+$site-color-med:        #2575fc !default;
+$site-color-light:      #eeeeff !default;
+$site-color-darkgray:   #9090b2 !default;
+$site-color-lightgray:  #f9f9fb !default;
+$site-text-color-invert:   #eee !default;
 
 @import "syntax-highlighting";
 
-
-
-
-
-.site-header {
+// fonts
+body {
+  font-family: Source Sans Pro, arial, sans-serif;
   background-color: $site-color-dark;
-
-  .logo-color-1 {
-    fill: $site-color-invert;
-    stroke: $site-color-invert;
-    stroke-width: 4;
-  }
-  .logo-color-2 {
-    fill:$site-color-med;
-    stroke:$site-color-med;
-    stroke-width: 4;
-  }
+}
+p,h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
 }
 
-
-
-
-
-.site-footer {
+// colors
+.site-bg-dark {
   background-color: $site-color-dark;
-  color: $site-color-invert;
-  margin-bottom: 0;
-  .logo-color-1 {
-    fill: $site-color-invert;
-    stroke: $site-color-invert;
-    stroke-width: 4;
-  }
-  .logo-color-2 {
-    fill:$site-color-med;
-    stroke:$site-color-med;
-    stroke-width: 4;
+  color: $site-text-color-invert;
+  a {
+    color: $site-text-color-invert;
   }
 }
-
-.footer-title {
-  svg {
-    display: inline-block;
-    vertical-align: middle;
-    height: 32px;
-  }
+.site-bg-med {
+  background-color: $site-color-med;
+  color: $site-text-color-invert;
+}
+.site-bg-light {
+  background-color: $site-color-light;
+}
+.site-bg-white {
+  background-color: #ffffff;
+}
+.site-bg-darkgray {
+  background-color: $site-color-darkgray;
+}
+.site-bg-lightgray {
+  background-color: $site-color-lightgray;
 }
 
-
-.navbar-brand svg {
+// svg
+.navbar-brand svg, .footer-title svg {
+  stroke-width: 4;
   display: inline-block;
   vertical-align: middle;
   height: 32px;
 }
 
-/**
- * Set style for homepage
- */
-.homepage-logo {
-  background-color: $site-color-dark;
-  color: $site-color-invert;
-  svg {
-    height: 200px;
-  }
-  .logo-color-1 {
-    fill: $site-color-invert;
-  }
-  .logo-color-2 {
-    fill:$site-color-med;
-  }
+.site-bg-med svg {
+  height: 200px;
 }
-.homepage-getstarted {
 
+.logo-color-1 {
+  fill: $site-text-color-invert;
+  stroke: $site-text-color-invert;
 }
-.homepage-features {
-  text-align: justify;
-}
-.homepage-tutorials {
-  background-color: $site-color-light;
-}
-.homepage-companies {
-  background-color: #ffffff;
-  img {
-    width: 100%;
-    padding: 10%;
-  }
+.logo-color-2 {
+  fill: $site-color-darkgray;
+  stroke:$site-color-darkgray;
 }
