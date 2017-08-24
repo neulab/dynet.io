@@ -47,6 +47,14 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+// svg
+svg {
+  height: inherit;
+}
+
+
+
+
 
 // bootstrap color override
 $body-bg:       $site-color-dark;
@@ -101,22 +109,8 @@ $theme-colors: (
   background-color: $site-color-lightgray;
   color: $site-text-color;
 }
-
-
-
-
-
-
-// svg
-.navbar-brand svg, .footer-title svg {
-  stroke-width: 4;
-  display: inline-block;
-  vertical-align: middle;
-  height: 32px;
-}
-
 .site-bg-med svg {
-  height: 200px;
+  // height: 200px;
 }
 
 .logo-color-1 {
