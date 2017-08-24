@@ -82,11 +82,9 @@ $theme-colors: (
 
 
 // color classes
-.site-bg-transparent {
-  background-color: rgba(0,0,0,0);
-}
 .site-bg-dark {
-  background: linear-gradient(245deg, #6a11cb, #2575fc);
+  background: linear-gradient(245deg, #6a11cb, #2575fc) no-repeat center center fixed;
+  background-size: cover;
   color: $site-text-color-invert;
 }
 .site-bg-med {
