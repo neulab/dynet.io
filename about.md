@@ -1,5 +1,6 @@
 ---
 title: About
+layout: page
 permalink: /about/
 ---
 
@@ -25,4 +26,8 @@ If you use DyNet for research, please cite this report as follows:
 
 The current release of DyNet is [v2.0](https://github.com/clab/dynet/releases/tag/v2.0).
 
-We welcome any contribution to DyNet! You can find the contributing guidelines [here](http://dynet.readthedocs.io/en/latest/contributing.html)
+We welcome any contribution to DyNet!
+
+<a href="http://dynet.readthedocs.io/en/latest/contributing.html" class="btn btn-outline-primary mb-5" markdown="1">
+  Contributing Guide
+</a>

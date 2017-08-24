@@ -1,17 +1,14 @@
-<footer class="site-bg-dark">
+<footer class="site-bg-transparent">
 
-  <div class="container">
-    <div class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="{{ "/" | relative_url }}">
-        {% include logo.svg %}
-      </a>
-
-      <h6 class="ml-auto text-right">
-        {{ site.description | escape }}
-        <br>
-        {{ site.copyright | escape }}
-      </h6>
-    </div>
+  <div class="container text-center pt-2">
+    <a class="footer-title" href="{{ "/" | relative_url }}">
+      {% include logo.svg %}
+    </a>
+    <h6 class="pt-1 pb-0">
+      {{ site.description | escape }}
+      <br>
+      {{ site.copyright | escape }}
+    </h6>
   </div>
 
 </footer>
