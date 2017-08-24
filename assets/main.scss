@@ -3,6 +3,126 @@
 # Do not remove the front matter: it ensures Jekyll loads it
 ---
 
+@import "syntax-highlighting";
+
+// collapsible navigation menu without javascript using invisible checkbox
+.navbar-expand-md {
+  input:checked ~ .navbar-collapse {
+    display: flex !important; // show menu if checkbox checked
+    .ml-auto {
+      margin-left: 0 !important; // right-align if checkbox checked
+    }
+  }
+}
+
+
+
+
+// color definitions
+$site-color-dark:       #1b1b63 !default;
+$site-color-med:        #2575fc !default;
+$site-color-light:      #eeeeff !default;
+$site-color-darkgray:   #9090b2 !default;
+$site-color-lightgray:  #f9f9fb !default;
+
+$site-text-color:       #1b1b63 !default;
+$site-text-color-invert:   #eee !default;
+
+
+
+
+
+
+// fonts
+$font-family-sans-serif: Source Sans Pro, Arial, sans-serif;
+$headings-font-weight: 300;
+
+
+
+
+
+
+// bootstrap color override
+$body-bg:       $site-color-dark;
+$body-color:    $site-text-color-invert;
+
+$input-disabled-bg:              $site-color-lightgray;
+
+$navbar-dark-color:                 $site-color-light;
+$navbar-dark-hover-color:           $site-color-darkgray;
+$navbar-dark-active-color:          $site-color-light;
+$navbar-dark-disabled-color:        $site-color-light;
+$navbar-dark-toggler-border-color:  $site-color-light;
+
+$theme-colors: (
+  primary: $site-color-med,
+  secondary: $site-color-light,
+  success: #28a745, // bootstrap default
+  info: #17a2b8, // bootstrap default
+  warning: #ffc107, // bootstrap default
+  danger: #dc3545, // bootstrap default
+  light: $site-color-lightgray,
+  dark: $site-color-dark,
+);
+
+
+// color classes
+.site-bg-dark {
+  background-color: $site-color-dark;
+  color: $site-text-color-invert;
+}
+.site-bg-med {
+  background-color: $site-color-med;
+  color: $site-text-color-invert;
+}
+.site-bg-light {
+  background-color: $site-color-light;
+  color: $site-text-color;
+}
+.site-bg-white {
+  background-color: #ffffff;
+  color: $site-text-color;
+}
+.site-bg-darkgray {
+  background-color: $site-color-darkgray;
+  color: $site-text-color;
+}
+.site-bg-lightgray {
+  background-color: $site-color-lightgray;
+  color: $site-text-color;
+}
+
+
+
+
+
+
+// svg
+.navbar-brand svg, .footer-title svg {
+  stroke-width: 4;
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+}
+
+.site-bg-med svg {
+  height: 200px;
+}
+
+.logo-color-1 {
+  fill: $site-text-color-invert;
+  stroke: $site-text-color-invert;
+}
+.logo-color-2 {
+  fill: $site-color-darkgray;
+  stroke:$site-color-darkgray;
+}
+
+
+
+
+
+
 // bootstrap core CSS
 @import "bootstrap/functions";
 @import "bootstrap/variables";
@@ -40,77 +160,3 @@
 // @import "bootstrap/popover";
 // @import "bootstrap/carousel";
 @import "bootstrap/utilities";
-
-// collapsible navigation menu without javascript using invisible checkbox
-.navbar-expand-md {
-  input:checked ~ .navbar-collapse {
-    display: flex !important; // show menu if checkbox checked
-    .ml-auto {
-      margin-left: 0 !important; // right-align if checkbox checked
-    }
-  }
-}
-
-$site-color-dark:       #1b1b63 !default;
-$site-color-med:        #2575fc !default;
-$site-color-light:      #eeeeff !default;
-$site-color-darkgray:   #9090b2 !default;
-$site-color-lightgray:  #f9f9fb !default;
-$site-text-color-invert:   #eee !default;
-
-@import "syntax-highlighting";
-
-// fonts
-body {
-  font-family: Source Sans Pro, arial, sans-serif;
-  background-color: $site-color-dark;
-}
-p,h1,h2,h3,h4,h5,h6 {
-  font-weight: 300;
-}
-
-// colors
-.site-bg-dark {
-  background-color: $site-color-dark;
-  color: $site-text-color-invert;
-  a {
-    color: $site-text-color-invert;
-  }
-}
-.site-bg-med {
-  background-color: $site-color-med;
-  color: $site-text-color-invert;
-}
-.site-bg-light {
-  background-color: $site-color-light;
-}
-.site-bg-white {
-  background-color: #ffffff;
-}
-.site-bg-darkgray {
-  background-color: $site-color-darkgray;
-}
-.site-bg-lightgray {
-  background-color: $site-color-lightgray;
-}
-
-// svg
-.navbar-brand svg, .footer-title svg {
-  stroke-width: 4;
-  display: inline-block;
-  vertical-align: middle;
-  height: 32px;
-}
-
-.site-bg-med svg {
-  height: 200px;
-}
-
-.logo-color-1 {
-  fill: $site-text-color-invert;
-  stroke: $site-text-color-invert;
-}
-.logo-color-2 {
-  fill: $site-color-darkgray;
-  stroke:$site-color-darkgray;
-}
