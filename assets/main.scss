@@ -3,6 +3,7 @@
 
 @import "syntax-highlighting";
 
+
 // collapsible navigation menu without javascript using invisible checkbox
 .navbar-expand-md {
   input:checked ~ .navbar-collapse {
@@ -13,15 +14,12 @@
   }
 }
 
-// color definitions
-$site-color-dark:       #1b1b63 !default;
-$site-color-med:        #2575fc !default;
-$site-color-light:      #eeeeff !default;
-$site-color-darkgray:   #9090b2 !default;
-$site-color-lightgray:  #f9f9fb !default;
 
-$site-text-color:       #1b1b63 !default;
-$site-text-color-invert:   #eee !default;
+// svg overrides
+svg {
+  height: inherit;
+  width: inherit;
+}
 
 
 // fonts
@@ -39,36 +37,6 @@ p {
 }
 
 
-// svg
-svg {
-  height: inherit;
-}
-
-
-// bootstrap color override
-$body-bg:       $site-color-dark;
-$body-color:    $site-text-color-invert;
-
-$input-disabled-bg:              $site-color-lightgray;
-
-$navbar-dark-color:                 $site-color-light;
-$navbar-dark-hover-color:           $site-color-darkgray;
-$navbar-dark-active-color:          $site-color-light;
-$navbar-dark-disabled-color:        $site-color-light;
-$navbar-dark-toggler-border-color:  $site-color-light;
-
-$theme-colors: (
-  primary: $site-color-med,
-  secondary: $site-color-light,
-  success: #28a745, // bootstrap default
-  info: #17a2b8, // bootstrap default
-  warning: #ffc107, // bootstrap default
-  danger: #dc3545, // bootstrap default
-  light: $site-color-lightgray,
-  dark: $site-color-dark,
-);
-
-
 // background image
 body {
   background-image: url('../assets/background.png');
@@ -78,45 +46,31 @@ body {
 }
 
 
-// logo svg colors
-.logo-color-1 {
-  fill: $site-text-color-invert;
-  stroke: $site-text-color-invert;
-}
-.logo-color-2 {
-  fill: $site-color-darkgray;
-  stroke:$site-color-darkgray;
-}
+// color definitions
+$theme-colors: (
+  primary: #2575fc, // used for hyperlinks
+  secondary: #9090b2, // used for navigation highlight
+  light: #f9f9fb, // used for light gray backgrounds
+  dark: #1b1b63, // used for text and buttons
+  invert: #eee, // used for text on dark backgrounds (non-bootstrap)
+
+  // set remaining colors to bootstrap default
+  success: #28a745,
+  info: #17a2b8,
+  warning: #ffc107,
+  danger: #dc3545,
+);
 
 
-// color classes
-.site-bg-dark {
-  background: linear-gradient(245deg, #6a11cb, #2575fc) no-repeat center center fixed;
-  background-size: cover;
-  color: $site-text-color-invert;
-}
-.site-bg-med {
-  background-color: $site-color-med;
-  color: $site-text-color-invert;
-}
-.site-bg-light {
-  background-color: $site-color-light;
-  color: $site-text-color;
-}
-.site-bg-white {
-  background-color: #ffffff;
-  color: $site-text-color;
-}
-.site-bg-darkgray {
-  background-color: $site-color-darkgray;
-  color: $site-text-color;
-}
-.site-bg-lightgray {
-  background-color: $site-color-lightgray;
-  color: $site-text-color;
-}
+// bootstrap color overrides
+$body-bg:       map-get($theme-colors, "primary");
+$body-color:    map-get($theme-colors, "invert");
 
+$input-disabled-bg:              map-get($theme-colors, "light");
 
+$navbar-dark-color:                 map-get($theme-colors, "light");
+$navbar-dark-hover-color:           map-get($theme-colors, "secondary");
+$navbar-dark-toggler-border-color:  map-get($theme-colors, "light");
 
 
 

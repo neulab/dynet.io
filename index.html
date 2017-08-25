@@ -8,89 +8,109 @@ layout: base
 
 
 <div class="text-center">
-  <div class="container" style="padding-top:6rem;">
+  <div class="container">
+    <div class="py-md-3 py-lg-5">
+    </div>
 
-    <span style="height: 200px;">
+    <span style="width: 33%;">
       {% include logo.svg %}
     </span>
 
-    <h2 class="pt-2 pb-4" style="margin-bottom: 6rem;">
+    <h3 class="pt-2 pb-4">
       The Dynamic Neural Network Toolkit
-    </h2>
+    </h3>
+
+    <div class="py-md-3 py-lg-5">
+    </div>
   </div>
 </div>
 
 
 
 
-<div class="site-bg-lightgray">
+<div class="bg-light text-dark">
   <div class="container">
 
     {% assign index_feat_1 = 'Dynamic Computational Graph' %}
-    {% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance' %}
+    {% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance.' %}
     {% assign index_feat_button_1 = 'Learn more' %}
     {% assign index_feat_button_url_1 = '#' %}
 
     {% assign index_feat_2 = 'Dynamic Operation Batching' %}
-    {% assign index_feat_text_2 = 'DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so' %}
+    {% assign index_feat_text_2 = 'DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so.' %}
     {% assign index_feat_button_2 = 'See our NIPS paper' %}
     {% assign index_feat_button_url_2 = '#' %}
 
-    {% assign index_feat_3 = 'Ideal for Natural Language Processing' %}
-    {% assign index_feat_text_3 = 'DyNet is well-suited for machine translation, syntactic parsing, morphological inflection, and other areas with models that have dynamic structures that change at every training instance.' %}
+    {% assign index_feat_3 = 'Ideal for Natural Language' %}
+    {% assign index_feat_text_3 = 'DyNet is well-suited for machine translation, syntactic parsing, morphological inflection, and other models used for natural language.' %}
     {% assign index_feat_button_3 = 'Learn more' %}
     {% assign index_feat_button_url_3 = '#' %}
 
     <div class="row">
-      <div class="col-sm">
+      <div class="col-md">
         <div class="row justify-content-center">
-          <h3>
-            {{ index_feat_1 }}
-          </h3>
+          <div class="pt-5">
+          {% include grid.svg %}
+          </div>
         </div>
         <div class="row justify-content-center">
-          <p class="px-3">
+          <h4 class="text-center py-3">
+            {{ index_feat_1 }}
+          </h4>
+        </div>
+        <div class="row justify-content-center">
+          <p class="text-center px-5 px-md-3 px-sm-0 my-0">
             {{ index_feat_text_1 }}
           </p>
         </div>
         <div class="row justify-content-center">
-          <a class="btn btn-outline-dark" href="{{ index_te_button_url_1 }}">
+          <a class="btn btn-outline-dark mt-3 my-3" href="{{ index_te_button_url_1 }}">
             {{ index_feat_button_1 }}
           </a>
         </div>
       </div>
 
-      <div class="col-sm">
+      <div class="col-md">
         <div class="row justify-content-center">
-          <h3>
-            {{ index_feat_2 }}
-          </h3>
+          <div class="pt-5">
+          {% include grid.svg %}
+          </div>
         </div>
         <div class="row justify-content-center">
-          <p class="px-3">
+          <h4 class="text-center py-3">
+            {{ index_feat_2 }}
+          </h4>
+        </div>
+        <div class="row justify-content-center">
+          <p class="text-center px-5 px-md-3 px-sm-0 my-0">
             {{ index_feat_text_2 }}
           </p>
         </div>
         <div class="row justify-content-center">
-          <a class="btn btn-outline-dark" href="{{ index_te_button_url_2 }}">
+          <a class="btn btn-outline-dark mt-3 mb-5" href="{{ index_te_button_url_2 }}">
             {{ index_feat_button_2 }}
           </a>
         </div>
       </div>
 
-      <div class="col-sm">
+      <div class="col-md">
         <div class="row justify-content-center">
-          <h3>
-            {{ index_feat_3 }}
-          </h3>
+          <div class="pt-5">
+          {% include grid.svg %}
+          </div>
         </div>
         <div class="row justify-content-center">
-          <p>
+          <h4 class="text-center py-3">
+            {{ index_feat_3 }}
+          </h4>
+        </div>
+        <div class="row justify-content-center">
+          <p class="text-center px-5 px-md-3 px-sm-0 my-0">
             {{ index_feat_text_3 }}
           </p>
         </div>
         <div class="row justify-content-center">
-          <a class="btn btn-outline-dark" href="{{ index_te_button_url_3 }}">
+          <a class="btn btn-outline-dark mt-3 mb-5" href="{{ index_te_button_url_3 }}">
             {{ index_feat_button_3 }}
           </a>
         </div>
@@ -103,7 +123,7 @@ layout: base
 
 
 
-<div class="site-bg-white">
+<div class="bg-white text-dark">
   <div class="container">
     <h1 class="pt-5 pb-3 my-0">
       Get Started
@@ -124,7 +144,7 @@ layout: base
 
 
 
-<div class="site-bg-lightgray">
+<div class="bg-light text-dark">
   <div class="container">
 
     {% assign index_te_title_1 = 'Tutorials' %}
@@ -148,7 +168,7 @@ layout: base
           {% include book.svg %}
         </div>
         <div class="row justify-content-center">
-          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1;">
+          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
             {{ index_te_text_1 }}
           </h6>
         </div>
@@ -169,7 +189,7 @@ layout: base
           {% include grid.svg %}
         </div>
         <div class="row justify-content-center">
-          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1;">
+          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
             {{ index_te_text_2 }}
           </h6>
         </div>
@@ -212,31 +232,31 @@ layout: base
 
     <div class="row align-items-center">
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_1 }}" alt="{{ index_comp_title_1 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_1 }}" alt="{{ index_comp_title_1 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_2 }}" alt="{{ index_comp_title_2 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_2 }}" alt="{{ index_comp_title_2 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_3 }}" alt="{{ index_comp_title_3 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_3 }}" alt="{{ index_comp_title_3 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_4 }}" alt="{{ index_comp_title_4 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_4 }}" alt="{{ index_comp_title_4 }}"/>
       </div>
     </div>
 
     <div class="row align-items-center">
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_5 }}" alt="{{ index_comp_title_5 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_5 }}" alt="{{ index_comp_title_5 }}"/>
       </div>
       <div class="col-6 col-md-3">
-        <img class="img-fluid p-5" src="{{ index_comp_url_6 }}" alt="{{ index_comp_title_6 }}"/>
+        <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_6 }}" alt="{{ index_comp_title_6 }}"/>
       </div>
       <div class="col-6 col-md-3 ">
-        <!-- <img class="img-fluid p-5" src="{{ index_comp_url_7 }}" alt="{{ index_comp_title_7 }}"/> -->
+        <!-- <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_7 }}" alt="{{ index_comp_title_7 }}"/> -->
       </div>
       <div class="col-6 col-md-3">
-        <!-- <img class="img-fluid p-5" src="{{ index_comp_url_8 }}" alt="{{ index_comp_title_8 }}"/> -->
+        <!-- <img class="img-fluid p-4 p-md-3 p-xl-5" src="{{ index_comp_url_8 }}" alt="{{ index_comp_title_8 }}"/> -->
       </div>
     </div>
 
