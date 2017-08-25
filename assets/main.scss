@@ -1,6 +1,4 @@
 ---
-# This file contains page specific styles
-# Do not remove the front matter: it ensures Jekyll loads it
 ---
 
 @import "syntax-highlighting";
@@ -15,9 +13,6 @@
   }
 }
 
-
-
-
 // color definitions
 $site-color-dark:       #1b1b63 !default;
 $site-color-med:        #2575fc !default;
@@ -27,10 +22,6 @@ $site-color-lightgray:  #f9f9fb !default;
 
 $site-text-color:       #1b1b63 !default;
 $site-text-color-invert:   #eee !default;
-
-
-
-
 
 
 // fonts
@@ -45,15 +36,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-
-
 // svg
 svg {
   height: inherit;
 }
-
-
-
 
 
 // bootstrap color override
@@ -79,6 +65,25 @@ $theme-colors: (
   dark: $site-color-dark,
 );
 
+
+// background image
+body {
+  background-image: url('../assets/background.png');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+
+
+// logo svg colors
+.logo-color-1 {
+  fill: $site-text-color-invert;
+  stroke: $site-text-color-invert;
+}
+.logo-color-2 {
+  fill: $site-color-darkgray;
+  stroke:$site-color-darkgray;
+}
 
 
 // color classes
@@ -106,18 +111,6 @@ $theme-colors: (
 .site-bg-lightgray {
   background-color: $site-color-lightgray;
   color: $site-text-color;
-}
-.site-bg-med svg {
-  // height: 200px;
-}
-
-.logo-color-1 {
-  fill: $site-text-color-invert;
-  stroke: $site-text-color-invert;
-}
-.logo-color-2 {
-  fill: $site-color-darkgray;
-  stroke:$site-color-darkgray;
 }
 
 
