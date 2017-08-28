@@ -8,8 +8,8 @@
 .navbar-expand-md {
   input:checked ~ .navbar-collapse {
     display: flex !important; // show menu if checkbox checked
-    .ml-auto {
-      margin-left: 0 !important; // right-align if checkbox checked
+    .nav-item {
+      text-align: right !important; // right-align if checkbox checked
     }
   }
 }
@@ -49,12 +49,11 @@ body {
 // color definitions
 $theme-colors: (
   primary: #2575fc, // used for hyperlinks
-  secondary: #9090b2, // used for navigation highlight
-  light: #f9f9fb, // used for light gray backgrounds
+  light: #f9f9fb, // used for text on dark backgrounds, light gray backgrounds
   dark: #1b1b63, // used for text and buttons
-  invert: #eee, // used for text on dark backgrounds (non-bootstrap)
 
   // set remaining colors to bootstrap default
+  secondary: #868e96,
   success: #28a745,
   info: #17a2b8,
   warning: #ffc107,
@@ -64,12 +63,11 @@ $theme-colors: (
 
 // bootstrap color overrides
 $body-bg:       map-get($theme-colors, "primary");
-$body-color:    map-get($theme-colors, "invert");
+$body-color:    map-get($theme-colors, "light");
 
 $input-disabled-bg:              map-get($theme-colors, "light");
 
 $navbar-dark-color:                 map-get($theme-colors, "light");
-$navbar-dark-hover-color:           map-get($theme-colors, "secondary");
 $navbar-dark-toggler-border-color:  map-get($theme-colors, "light");
 
 
