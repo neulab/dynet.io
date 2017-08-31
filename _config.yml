@@ -6,8 +6,8 @@ permalink: /news/:year/:month/:day/:title
 header_pages:
   - about.md
   - news/index.html
-  - docs.md
   - support.md
+  - docs.md
   - github.md
 gems:
   - jekyll-feed

@@ -2,9 +2,6 @@
   <div class="container">
 
     <nav class="navbar navbar-expand-md navbar-dark">
-      {% assign default_paths = site.pages | map: "path" %}
-      {% assign page_paths = site.header_pages | default: default_paths %}
-
 
       <a class="navbar-brand" href="{{ "/" | relative_url }}">
         <span style="stroke-width: 4; height: 32px; display: inline-block; vertical-align: middle;">
@@ -19,14 +16,19 @@
         </button>
       </label>
 
-      {% if page_paths %}
+      {% if site.header_pages %}
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-            {% for path in page_paths %}
-              {% assign my_page = site.pages | where: "path", path | first %}
-              {% if my_page.title %}
+            {% for path in site.header_pages %}
+              {% assign current_page = site.pages | where: "path", path | first %}
+              {% if current_page.title %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                  <a class="nav-link" href="{{ current_page.url | relative_url }}">
+                    {{ current_page.title | escape }}
+                    {% if current_page.redirect_to %}
+                      {% include redirect.svg %}
+                    {% endif %}
+                  </a>
                 </li>
               {% endif %}
             {% endfor %}
