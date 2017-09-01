@@ -8,7 +8,10 @@ DyNet is a neural network library developed by Carnegie Mellon University and ma
 
 Read the [documentation](http://dynet.readthedocs.io/en/latest/) to get started, and feel free to contact the [dynet-users group](https://groups.google.com/forum/#!forum/dynet-users) group with any questions (if you want to receive email make sure to select "all email" when you sign up). We greatly appreciate any bug reports and contributions, which can be made by filing an issue or making a pull request through the [github page](http://github.com/clab/dynet).
 
-You can also read more technical details in our [technical report](https://arxiv.org/abs/1701.03980).
+<a href="https://arxiv.org/abs/1701.03980" class="btn btn-outline-primary" markdown="1">
+  Check out the tech report
+</a>
+
 
 ## Citing
 
@@ -28,6 +31,6 @@ The current release of DyNet is [v2.0](https://github.com/clab/dynet/releases/ta
 
 We welcome any contribution to DyNet!
 
-<a href="http://dynet.readthedocs.io/en/latest/contributing.html" class="btn btn-outline-primary mb-5" markdown="1">
+<a href="http://dynet.readthedocs.io/en/latest/contributing.html" class="btn btn-outline-primary" markdown="1">
   Contributing Guide
 </a>

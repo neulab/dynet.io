@@ -6,7 +6,6 @@ permalink: /news/:year/:month/:day/:title
 header_pages:
   - pages/about.md
   - news/index.html
-  - pages/support.md
   - pages/docs.md
   - pages/github.md
 gems:

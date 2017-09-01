@@ -15,7 +15,12 @@ We've added a feature to DyNet that will transform the way you think about and r
 
 In what follows, we show some examples of non-batched DyNet code, and then move on to show the batched version.
 
-In order to enable auto-batching support, simply add --dynet-autobatch 1 to the commandline flags when running a DyNet program. Check out the paper or read on for more details!
+In order to enable auto-batching support, simply add --dynet-autobatch 1 to the commandline flags when running a DyNet program.
+
+<a href="https://arxiv.org/abs/1705.07860" class="btn btn-outline-primary" markdown="1">
+Check out the paper
+</a>
+
 
 ## Dynamic Graphs, Non-batched
 Let's look at some examples of non-batched code, and how simple they are to write in DyNet.
