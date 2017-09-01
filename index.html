@@ -168,15 +168,15 @@ layout: base
             </label>
             <div class="btn-group" data-toggle="buttons" id="language-group">
               <label class="btn btn-sm btn-outline-dark active" onclick="makeGetStartedButtonActive(this);">
-                <input type="radio" name="language" id="language-1" autocomplete="off" checked>
+                <input type="radio" name="language" id="language-1" checked>
                 {{ index_install_language_1 }}
               </label>
               <label class="btn btn-sm btn-outline-dark" onclick="makeGetStartedButtonActive(this);">
-                <input type="radio" name="language" id="language-2" autocomplete="off">
+                <input type="radio" name="language" id="language-2">
                 {{ index_install_language_2 }}
               </label>
               <label class="btn btn-sm btn-outline-dark" onclick="makeGetStartedButtonActive(this);">
-                <input type="radio" name="language" id="language-3" autocomplete="off">
+                <input type="radio" name="language" id="language-3">
                 {{ index_install_language_3 }}
               </label>
             </div>
@@ -262,6 +262,7 @@ layout: base
           </a>
         </div>
       </div>
+    </div>
   </div>
 </div>
 
@@ -270,7 +271,7 @@ layout: base
 
 
 
-<div style="background-color: #ffffff">
+<div class="text-dark" style="background-color: #ffffff">
   <div class="container">
     <h1 class="pt-5 pb-2 text-center">
       Companies &amp; Universities supporting DyNet

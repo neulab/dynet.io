@@ -4,7 +4,7 @@
 
 // collapsible navigation menu without javascript using invisible checkbox
 .navbar-expand-md {
-  input:checked ~ .navbar-collapse {
+  #navbar-collapse-trigger:checked ~ .navbar-collapse {
     display: flex !important; // show menu if checkbox checked
     .nav-item {
       text-align: right !important; // right-align if checkbox checked
@@ -60,13 +60,10 @@ $theme-colors: (
 
 
 // bootstrap color overrides
-$body-bg:       map-get($theme-colors, "dark");
-$body-color:    map-get($theme-colors, "light");
-
-$input-disabled-bg:              map-get($theme-colors, "light");
-
-$navbar-dark-color:                 map-get($theme-colors, "light");
-$navbar-dark-toggler-border-color:  map-get($theme-colors, "light");
+$body-bg: map-get($theme-colors, "dark");
+$body-color: map-get($theme-colors, "light");
+$input-disabled-bg: map-get($theme-colors, "light");
+$navbar-dark-color: map-get($theme-colors, "light");
 
 
 // set syntax highlighting background

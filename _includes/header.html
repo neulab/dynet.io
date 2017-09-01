@@ -9,11 +9,9 @@
         </span>
       </a>
 
-      <input type="checkbox" id="navbar-collapse-trigger" style="display: none;"/>
-      <label for="navbar-collapse-trigger">
-        <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <input type="checkbox" id="navbar-collapse-trigger" role="button" style="display: none;"  aria-controls="navbar-collapse-trigger" aria-expanded="false" aria-label="Toggle navigation"/>
+      <label class="d-md-none d-sm-inline-block border border-light rounded mx-0 my-0" for="navbar-collapse-trigger">
+        <span class="navbar-toggler-icon mx-2 my-2"></span>
       </label>
 
       {% if site.header_pages %}
