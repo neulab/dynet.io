@@ -1,8 +1,6 @@
 ---
 ---
 
-@import "syntax-highlighting";
-
 
 // collapsible navigation menu without javascript using invisible checkbox
 .navbar-expand-md {
@@ -71,7 +69,17 @@ $navbar-dark-color:                 map-get($theme-colors, "light");
 $navbar-dark-toggler-border-color:  map-get($theme-colors, "light");
 
 
+// set syntax highlighting background
+.highlight {
+    background: map-get($theme-colors, "light");
+    .highlighter-rouge & {
+      background: map-get($theme-colors, "light");
+    }
+}
 
+
+// import syntax highlighting colors
+@import "syntax-highlighting";
 
 // bootstrap core CSS
 @import "bootstrap/functions";
