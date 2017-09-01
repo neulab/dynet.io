@@ -34,17 +34,17 @@ layout: base
     {% assign index_feat_1 = 'Dynamic Computational Graph' %}
     {% assign index_feat_text_1 = 'DyNet builds its computational graph on the fly. This makes variable-input and variable-output models simple to implement with high performance.' %}
     {% assign index_feat_button_1 = 'Learn more' %}
-    {% assign index_feat_button_url_1 = '/about/' %}
+    {% assign index_feat_button_url_1 = 'about/' %}
 
     {% assign index_feat_2 = 'Dynamic Operation Batching' %}
     {% assign index_feat_text_2 = 'DyNet automatically reorganizes operations into batches for maximum performance, without requiring the developer to do so.' %}
     {% assign index_feat_button_2 = 'Learn more' %}
-    {% assign index_feat_button_url_2 = '/autobatch/' %}
+    {% assign index_feat_button_url_2 = 'autobatch/' %}
 
     {% assign index_feat_3 = 'Ideal for Complex Structures' %}
     {% assign index_feat_text_3 = 'DyNet is well-suited for natural language processing, graph structures, reinforcement learning, and other complex state spaces.' %}
     {% assign index_feat_button_3 = 'Learn more' %}
-    {% assign index_feat_button_url_3 = '/complex/' %}
+    {% assign index_feat_button_url_3 = 'complex/' %}
 
     <div class="row">
       <div class="col-md">
@@ -125,6 +125,15 @@ layout: base
 
 <div class="bg-white text-dark">
   <div class="container">
+
+    {% assign index_install_language_1 = 'Python' %}
+    {% assign index_install_language_2 = 'C++' %}
+    {% assign index_install_language_3 = 'Other languages' %}
+
+    {% assign index_install_command_1 = 'pip install git+https://github.com/clab/dynet#egg=dynet' %}
+    {% assign index_install_command_2 = 'http://dynet.readthedocs.io/en/latest/install.html' %}
+    {% assign index_install_command_3 = 'http://dynet.readthedocs.io/en/latest/other_languages.html' %}
+
     <div class="row">
       <div class="col-md-6">
         <h1 class="pt-5 pb-3 my-0">
@@ -135,26 +144,40 @@ layout: base
         <div class="pt-5 pb-3">
           <div class="pt-2">
             <script type="text/javascript">
-              function makeButtonActive(node) {
+              function updateGetStartedText() {
+                var language = document.querySelector('input[name="language"]:checked').id;
+                if(language=='language-1') {
+                  document.getElementById('clipboard-target-1').value = '{{ index_install_command_1 }}';
+                } else if(language=='language-2') {
+                  document.getElementById('clipboard-target-1').value = '{{ index_install_command_2 }}';
+                } else if(language=='language-3') {
+                  document.getElementById('clipboard-target-1').value = '{{ index_install_command_3}}';
+                }
+              }
+              function makeGetStartedButtonActive(node) {
                 var children = node.parentNode.children;
                 for(var i = 0; i < children.length; i++) {
                   children[i].classList.remove('active');
                 }
                 node.classList.add('active');
+                updateGetStartedText();
               }
             </script>
             <label class="pr-3">
               Language
             </label>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-sm btn-outline-dark active" onclick="makeButtonActive(this);">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Python
+            <div class="btn-group" data-toggle="buttons" id="language-group">
+              <label class="btn btn-sm btn-outline-dark active" onclick="makeGetStartedButtonActive(this);">
+                <input type="radio" name="language" id="language-1" autocomplete="off" checked>
+                {{ index_install_language_1 }}
               </label>
-              <label class="btn btn-sm btn-outline-dark" onclick="makeButtonActive(this);">
-                <input type="radio" name="options" id="option2" autocomplete="off"> C++
+              <label class="btn btn-sm btn-outline-dark" onclick="makeGetStartedButtonActive(this);">
+                <input type="radio" name="language" id="language-2" autocomplete="off">
+                {{ index_install_language_2 }}
               </label>
-              <label class="btn btn-sm btn-outline-dark" onclick="makeButtonActive(this);">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Other languages
+              <label class="btn btn-sm btn-outline-dark" onclick="makeGetStartedButtonActive(this);">
+                <input type="radio" name="language" id="language-3" autocomplete="off">
+                {{ index_install_language_3 }}
               </label>
             </div>
           </div>
@@ -163,14 +186,13 @@ layout: base
     </div>
 
     <div class="input-group pb-5">
-      <input id="clipboard-target-1" type="text" class="form-control" value="pip install git+https://github.com/clab/dynet#egg=dynet" readonly>
+      <input id="clipboard-target-1" type="text" class="form-control" value="{{ index_install_command_1 }}" readonly>
       <span class="input-group-btn">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
         <script type="text/javascript">
           var clipboard = new Clipboard('.clipboard-button');
           clipboard.on('success', function(e) {
-            var element = document.getElementById("clipboard-button-1");
-            element.innerHTML = "Copied!";
+            document.getElementById('clipboard-button-1').innerHTML = 'Copied!';
           });
         </script>
         <button id="clipboard-button-1" class="btn btn-outline-dark clipboard-button" data-clipboard-target="#clipboard-target-1">Copy</button>
@@ -255,17 +277,17 @@ layout: base
     </h1>
 
     {% assign index_comp_title_1 = 'Carnegie Mellon University' %}
-    {% assign index_comp_url_1 = '/assets/contributors/cmu.png' %}
+    {% assign index_comp_url_1 = 'assets/contributors/cmu.png' %}
     {% assign index_comp_title_2 = 'Bar-Ilan University' %}
-    {% assign index_comp_url_2 = '/assets/contributors/biu.jpg' %}
-    {% assign index_comp_title_3 = 'Allen Institute for Artificial Intelligence' %}
-    {% assign index_comp_url_3 = '/assets/contributors/ai2.png' %}
-    {% assign index_comp_title_4 = 'Petuum' %}
-    {% assign index_comp_url_4 = '/assets/contributors/petuum.png' %}
+    {% assign index_comp_url_2 = 'assets/contributors/biu.jpg' %}
+    {% assign index_comp_title_3 = 'Petuum' %}
+    {% assign index_comp_url_3 = 'assets/contributors/petuum.png' %}
+    {% assign index_comp_title_4 = 'Allen Institute for Artificial Intelligence' %}
+    {% assign index_comp_url_4 = 'assets/contributors/ai2.png' %}
     {% assign index_comp_title_5 = 'Nara Institute of Science and Technology' %}
-    {% assign index_comp_url_5 = '/assets/contributors/naist.png' %}
+    {% assign index_comp_url_5 = 'assets/contributors/naist.png' %}
     {% assign index_comp_title_6 = 'University of Washington' %}
-    {% assign index_comp_url_6 = '/assets/contributors/uw.jpg' %}
+    {% assign index_comp_url_6 = 'assets/contributors/uw.jpg' %}
     {% assign index_comp_title_7 = ' ' %}
     {% assign index_comp_url_7 = ' ' %}
     {% assign index_comp_title_8 = ' ' %}
