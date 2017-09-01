@@ -98,7 +98,7 @@ $navbar-dark-toggler-border-color:  map-get($theme-colors, "light");
 // bootstrap components: disabled to save compile time
 @import "bootstrap/transitions";
 // @import "bootstrap/dropdown";
-// @import "bootstrap/button-group";
+@import "bootstrap/button-group";
 @import "bootstrap/input-group";
 // @import "bootstrap/custom-forms";
 @import "bootstrap/nav";

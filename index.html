@@ -125,9 +125,42 @@ layout: base
 
 <div class="bg-white text-dark">
   <div class="container">
-    <h1 class="pt-5 pb-3 my-0">
-      Get Started
-    </h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="pt-5 pb-3 my-0">
+          Get Started
+        </h1>
+      </div>
+      <div class="col-md-6 text-right">
+        <div class="pt-5 pb-3">
+          <div class="pt-2">
+            <script type="text/javascript">
+              function makeButtonActive(node) {
+                var children = node.parentNode.children;
+                for(var i = 0; i < children.length; i++) {
+                  children[i].classList.remove('active');
+                }
+                node.classList.add('active');
+              }
+            </script>
+            <label class="pr-3">
+              Language
+            </label>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-sm btn-outline-dark active" onclick="makeButtonActive(this);">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Python
+              </label>
+              <label class="btn btn-sm btn-outline-dark" onclick="makeButtonActive(this);">
+                <input type="radio" name="options" id="option2" autocomplete="off"> C++
+              </label>
+              <label class="btn btn-sm btn-outline-dark" onclick="makeButtonActive(this);">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Other languages
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="input-group pb-5">
       <input id="clipboard-target-1" type="text" class="form-control" value="pip install git+https://github.com/clab/dynet#egg=dynet" readonly>
