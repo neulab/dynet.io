@@ -39,7 +39,7 @@ p {
 
 // background image
 body {
-  background-image: url('../assets/background.png');
+  background-image: url('../assets/background.jpg');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat-y;
@@ -62,7 +62,7 @@ $theme-colors: (
 
 
 // bootstrap color overrides
-$body-bg:       map-get($theme-colors, "primary");
+$body-bg:       map-get($theme-colors, "dark");
 $body-color:    map-get($theme-colors, "light");
 
 $input-disabled-bg:              map-get($theme-colors, "light");
