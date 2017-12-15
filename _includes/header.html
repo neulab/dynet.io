@@ -1,43 +1,37 @@
-<header>
+<header id="nav-header">
   <div class="container">
-
-    <nav class="navbar navbar-expand-md navbar-dark">
-
-      <a class="navbar-brand" href="{{ "/" | relative_url }}">
+      <a id="nav-title" href="{{ "/" | relative_url }}">
         <span style="stroke-width: 4; height: 32px; display: inline-block; vertical-align: middle;">
           {% include logo.svg %}
         </span>
       </a>
 
-      <input type="checkbox" id="navbar-collapse-trigger" role="button" style="display: none;"  aria-controls="navbar-collapse-trigger" aria-expanded="false" aria-label="Toggle navigation"/>
-      <label class="d-md-none d-sm-inline-block border border-light rounded mx-0 my-0" for="navbar-collapse-trigger">
-        <span class="navbar-toggler-icon mx-2 my-2"></span>
-      </label>
-
       {% if site.header_pages %}
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
+        <nav id="nav-container">
+          <input type="checkbox" id="nav-trigger"/>
+          <label for="nav-trigger" id="nav-trigger-label">
+            {% include icon-menu.svg %}
+          </label>
+
+          <div id="nav-menu">
             {% for path in site.header_pages %}
               {% assign current_page = site.pages | where: "path", path | first %}
               {% if current_page.title %}
-                <li class="nav-item">
-                  {% if current_page.redirect_to %}
-                    {% assign current_link = current_page.redirect_to %}
-                  {% else %}
-                    {% assign current_link = current_page.url | relative_url %}
+                {% if current_page.redirect_to %}
+                  {% assign current_link = current_page.redirect_to %}
+                {% else %}
+                  {% assign current_link = current_page.url | relative_url %}
+                {% endif %}
+                <a href="{{ current_link }}">
+                  {{ current_page.title | escape }}
+                  {% if current_page.redirect_checkbox %}
+                    {% include redirect.svg %}
                   {% endif %}
-                  <a class="nav-link" href="{{ current_link }}">
-                    {{ current_page.title | escape }}
-                    {% if current_page.redirect_to %}
-                      {% include redirect.svg %}
-                    {% endif %}
-                  </a>
-                </li>
+                </a>
               {% endif %}
             {% endfor %}
-          </ul>
-        </div>
+          </div>
+        </nav>
       {% endif %}
-    </nav>
   </div>
 </header>

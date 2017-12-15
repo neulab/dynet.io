@@ -4,8 +4,9 @@ copyright: © 2017 DyNet
 markdown: kramdown
 permalink: /news/:year/:month/:day/:title
 header_pages:
+  - pages/getstarted.md
   - pages/about.md
-  - news/index.html
+  - pages/news.md
   - pages/docs.md
   - pages/github.md
 gems:
@@ -15,7 +16,6 @@ gems:
   - jekyll-mentions
   - jekyll-sitemap
 paginate: 5
-paginate_path: "/news/page:num/"
 google_analytics: UA-39940420-2
 defaults:
   - scope:

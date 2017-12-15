@@ -1,72 +1,38 @@
 ---
 ---
 
-
-// collapsible navigation menu without javascript using invisible checkbox
-.navbar-expand-md {
-  #navbar-collapse-trigger:checked ~ .navbar-collapse {
-    display: flex !important; // show menu if checkbox checked
-    .nav-item {
-      text-align: right !important; // right-align if checkbox checked
-    }
-  }
-}
-
-
-// svg overrides
-svg {
-  height: inherit;
-  width: inherit;
-}
-
-
-// fonts
-$font-family-sans-serif: Source Sans Pro, Arial, sans-serif;
-$font-weight-normal: 400;
-$headings-font-weight: 300;
-$h6-font-size: 1.125rem;
-$link-hover-decoration: none;
-h1,h2,h3,h4,h5,h6 {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-p {
-  text-align: justify;
-}
-
-
-// background image
-body {
-  background-image: url('../assets/background.jpg');
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: repeat-y;
-}
-
-
 // color definitions
 $theme-colors: (
   primary: #2575fc, // used for hyperlinks
   light: #f9f9fb, // used for text on dark backgrounds, light gray backgrounds
   dark: #1b1b63, // used for text and buttons
-
-  // set remaining colors to bootstrap default
-  secondary: #868e96,
-  success: #28a745,
-  info: #17a2b8,
-  warning: #ffc107,
-  danger: #dc3545,
 );
 
 
-// bootstrap color overrides
-$body-bg: map-get($theme-colors, "dark");
-$body-color: map-get($theme-colors, "light");
-$input-disabled-bg: map-get($theme-colors, "light");
-$navbar-dark-color: map-get($theme-colors, "light");
+// responsive nav
+$responsive-nav-border-color: map-get($theme-colors, "dark");
+$responsive-nav-background-color: #fff;
+$responsive-nav-icon-color: map-get($theme-colors, "dark");
+
+@import "responsive-nav";
+
+#nav-menu a {
+  color: map-get($theme-colors, "light") !important;
+  @media (max-width: $responsive-nav-cutoff-width - 1) {
+    color: map-get($theme-colors, "dark") !important;
+  }
+}
+#nav-menu a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+  @media (max-width: $responsive-nav-cutoff-width - 1) {
+    color: lighten(map-get($theme-colors, "dark"), 25%) !important;
+  }
+}
 
 
-// set syntax highlighting background
+// syntax highlighting colors
+@import "syntax-highlighting";
+
 .highlight {
     background: map-get($theme-colors, "light");
     .highlighter-rouge & {
@@ -75,43 +41,78 @@ $navbar-dark-color: map-get($theme-colors, "light");
 }
 
 
-// import syntax highlighting colors
-@import "syntax-highlighting";
+// overrides
+svg {
+  height: inherit;
+  width: inherit;
+}
 
-// bootstrap core CSS
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-@import "bootstrap/print";
-@import "bootstrap/reboot";
-@import "bootstrap/type";
-@import "bootstrap/images";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
+body {
+  background: map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "light");
+  background-image: url('../assets/background.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  font-weight: 400;
+}
 
-// bootstrap components: disabled to save compile time
-@import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
-@import "bootstrap/button-group";
-@import "bootstrap/input-group";
-// @import "bootstrap/custom-forms";
-@import "bootstrap/nav";
-@import "bootstrap/navbar";
-// @import "bootstrap/card";
-// @import "bootstrap/breadcrumb";
-// @import "bootstrap/pagination";
-// @import "bootstrap/badge";
-// @import "bootstrap/jumbotron";
-// @import "bootstrap/alert";
-// @import "bootstrap/progress";
-// @import "bootstrap/media";
-// @import "bootstrap/list-group";
-// @import "bootstrap/close";
-// @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popover";
-// @import "bootstrap/carousel";
-@import "bootstrap/utilities";
+h1,h2,h3,h4,h5,h6 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: map-get($theme-colors, "primary");
+}
+
+a:hover {
+  color: darken(map-get($theme-colors, "primary"), 15%);
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+}
+
+
+// bootstrap overrides
+.text-dark {
+  color: map-get($theme-colors, "dark") !important;
+}
+
+@mixin button-outline-variant($color) {
+  color: $color;
+  border-color: $color;
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+  }
+
+  &:hover,
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: #fff;
+    background-color: $color;
+    border-color: $color;
+    box-shadow: none;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: map-get($theme-colors, "light");
+}

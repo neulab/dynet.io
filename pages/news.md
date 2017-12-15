@@ -1,7 +1,7 @@
 ---
-title: About
-permalink: /about/
+title: News
+permalink: /news/
 redirect_to:
-  - /#about
+  - /#news
 redirect_checkbox: false
 ---
