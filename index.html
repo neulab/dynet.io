@@ -381,7 +381,7 @@ layout: base
           {{ post.date | date: "%B %-d, %Y" }}
 
           <h2 class="py-0">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {{ post.title | escape }}
           </h2>
 
           {{ post.excerpt }}

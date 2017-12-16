@@ -22,3 +22,8 @@ defaults:
       path: ""
     values:
       image: /assets/logomark.png
+  - scope:
+      path: "_posts"
+    values:
+      redirect_to:
+        - /#news
