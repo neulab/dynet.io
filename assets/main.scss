@@ -74,10 +74,6 @@ $responsive-nav-cutoff-width: 768px !default; // from Bootstrap
 
 
 // overrides
-svg {
-  height: inherit;
-  width: inherit;
-}
 
 body {
   background: map-get($theme-colors, "dark");

@@ -12,9 +12,8 @@ layout: base
     <div class="py-md-3 py-lg-5">
     </div>
 
-    <span style="width: 33%;">
-      {% include logo.svg %}
-    </span>
+    {% capture logo-main %}{% include logo.svg %}{% endcapture %}
+    {{ logo-main | replace: '<svg viewBox', '<svg style="width: 33%;" viewBox' }}
 
     <h3 class="pt-2 pb-4">
       The Dynamic Neural Network Toolkit
