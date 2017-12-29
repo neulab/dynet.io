@@ -12,13 +12,12 @@ layout: base
     <div class="py-md-3 py-lg-5">
     </div>
 
-    <span style="width: 33%;">
-      {% include logo.svg %}
-    </span>
+    {% capture logo-main %}{% include logo.svg %}{% endcapture %}
+    {{ logo-main | replace: '<svg viewBox', '<svg style="width: 33%;" viewBox' }}
 
-    <h3 class="pt-2 pb-4">
+    <h1 class="h3 pt-2 pb-4">
       The Dynamic Neural Network Toolkit
-    </h3>
+    </h1>
 
     <div class="py-md-3 py-lg-5">
     </div>
@@ -54,9 +53,9 @@ layout: base
           </div>
         </div>
         <div class="row justify-content-center">
-          <h4 class="text-center py-3">
+          <h2 class="h4 text-center py-3">
             {{ index_feat_1 }}
-          </h4>
+          </h2>
         </div>
         <div class="row justify-content-center">
           <p class="text-center px-5 px-md-3 px-sm-0 my-0">
@@ -77,9 +76,9 @@ layout: base
           </div>
         </div>
         <div class="row justify-content-center">
-          <h4 class="text-center py-3">
+          <h2 class="h4 text-center py-3">
             {{ index_feat_2 }}
-          </h4>
+          </h2>
         </div>
         <div class="row justify-content-center">
           <p class="text-center px-5 px-md-3 px-sm-0 my-0">
@@ -100,9 +99,9 @@ layout: base
           </div>
         </div>
         <div class="row justify-content-center">
-          <h4 class="text-center py-3">
+          <h2 class="h4 text-center py-3">
             {{ index_feat_3 }}
-          </h4>
+          </h2>
         </div>
         <div class="row justify-content-center">
           <p class="text-center px-5 px-md-3 px-sm-0 my-0">
@@ -223,17 +222,17 @@ layout: base
     <div class="row">
       <div class="col-sm">
         <div class="row justify-content-center">
-          <h2 class="py-5 my-0">
+          <h1 class="h2 py-5 my-0">
             {{ index_te_title_1 }}
-          </h2>
+          </h1>
         </div>
         <div class="row justify-content-center">
           {% include book.svg %}
         </div>
         <div class="row justify-content-center">
-          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
+          <h2 class="h6 pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
             {{ index_te_text_1 }}
-          </h6>
+          </h2>
         </div>
         <div class="row justify-content-center">
           <a class="btn btn-outline-dark mb-5" href="{{ index_te_url_1 }}">
@@ -244,17 +243,17 @@ layout: base
 
       <div class="col-sm">
         <div class="row justify-content-center">
-          <h2 class="py-5 my-0">
+          <h1 class="h2 py-5 my-0">
             {{ index_te_title_2 }}
-          </h2>
+          </h1>
         </div>
         <div class="row justify-content-center">
           {% include grid.svg %}
         </div>
         <div class="row justify-content-center">
-          <h6 class="pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
+          <h2 class="h6 pt-3 pb-5 my-0" style="color: #8f8fb1; font-weight: 400;">
             {{ index_te_text_2 }}
-          </h6>
+          </h2>
         </div>
         <div class="row justify-content-center">
           <a class="btn btn-outline-dark mb-5" href="{{ index_te_url_2 }}">
@@ -384,7 +383,7 @@ layout: base
             {{ post.title | escape }}
           </h2>
 
-          {{ post.excerpt }}
+          {{ post.content }}
         </li>
       {% endfor %}
     </ul>
@@ -392,13 +391,13 @@ layout: base
     {% if site.paginate %}
     <nav class="pt-1 pb-2" aria-label="News navigation">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">&laquo; Previous</a>
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
       {% endif %}
 
       Page: {{ paginator.page }} of {{ paginator.total_pages }}
 
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
+        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
       {% endif %}
     </nav>
     {% endif %}

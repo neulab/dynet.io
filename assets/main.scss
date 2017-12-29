@@ -74,10 +74,6 @@ $responsive-nav-cutoff-width: 768px !default; // from Bootstrap
 
 
 // overrides
-svg {
-  height: inherit;
-  width: inherit;
-}
 
 body {
   background: map-get($theme-colors, "dark");
@@ -90,13 +86,13 @@ body {
   font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-weight: 300;
 }
 
-h6 {
+h6,.h6 {
   font-size: 1.125rem;
 }
 
