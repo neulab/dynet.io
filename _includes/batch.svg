@@ -5,6 +5,7 @@
       <stop stop-color="#2575FC" offset="1"/>
     </linearGradient>
   </defs>
+  <title>Batch</title>
   <g stroke="url(#linear-gradient-batch)" fill="none" stroke-width="2">
     <path d="M24,38.0644222 L24,53 L73,53 L73,32 L61.8863724,32 L61.8863724,36.0644222 C61.8863724,37.1689917 60.9909419,38.0644222 59.8863724,38.0644222 L24,38.0644222 Z"/>
     <path d="M29,38 L29,47 L38,47 L38,38 L29,38 Z M44,38 L44,47 L53,47 L53,38 L44,38 Z M59,38 L59,47 L68,47 L68,38 L59,38 Z"/>
