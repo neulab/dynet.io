@@ -9,7 +9,7 @@ header_pages:
   - pages/news.md
   - pages/docs.md
   - pages/github.md
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
